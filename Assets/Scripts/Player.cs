@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Jobs;
 
 public class Player : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class Player : MonoBehaviour
        
         Movimento();
  
-         
+        
 
         if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
 
