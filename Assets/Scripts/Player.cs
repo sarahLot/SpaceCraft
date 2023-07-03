@@ -88,8 +88,19 @@ public class Player : MonoBehaviour
 
    }
 
+    public IEnumerator DisparoTriploRotina()
+    {
+        yield return new WaitForSeconds(7.0f);
+        possoDarDisparoTriplo = false;
+
+    }
 
 
+    public void LigarPUDisparoTriplo()
+    {
+        possoDarDisparoTriplo = true;
+        StartCoroutine(DisparoTriploRotina());
+    }
 
 
 }

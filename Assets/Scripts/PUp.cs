@@ -28,7 +28,7 @@ public class PUp : MonoBehaviour
 
             if ( player != null)
             {
-                player.possoDarDisparoTriplo = true;
+                player.LigarPUDisparoTriplo();
             }
             
 
@@ -39,4 +39,6 @@ public class PUp : MonoBehaviour
 
        
     }
+
+
 }
