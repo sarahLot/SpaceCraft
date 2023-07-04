@@ -18,6 +18,8 @@ public class Player : MonoBehaviour
 
     public GameObject disparoTriplo ;
 
+    public int vidas = 3;
+
 
     // Start is called before the first frame update
     void Start()
@@ -102,5 +104,18 @@ public class Player : MonoBehaviour
         StartCoroutine(DisparoTriploRotina());
     }
 
+
+    public void DanoAoPlayer()
+    {
+        // vidas = vidas - 1;
+        vidas--;
+
+        if ( vidas < 1 )
+        {
+            Destroy(this.gameObject);
+        }
+        
+
+    }
 
 }
