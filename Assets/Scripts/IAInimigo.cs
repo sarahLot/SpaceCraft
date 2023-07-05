@@ -8,6 +8,9 @@ public class IAInimigo : MonoBehaviour
 
     private float _velocidade = 6.0f;
 
+    [SerializeField]
+    private GameObject _explosaoDoInimigo;
+
     void Start()
     {
         
@@ -35,6 +38,9 @@ public class IAInimigo : MonoBehaviour
         if ( other.tag == "Tiro")
         {
             Destroy(other.gameObject);
+
+            
+
         }
 
         if ( other.tag == "Player")
@@ -50,6 +56,7 @@ public class IAInimigo : MonoBehaviour
 
         Destroy(this.gameObject);
 
+        Instantiate(_explosaoDoInimigo, transform.position, Quaternion.identity);
 
     }
 }
