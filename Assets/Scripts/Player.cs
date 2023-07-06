@@ -20,6 +20,8 @@ public class Player : MonoBehaviour
 
     public int vidas = 3;
 
+    [SerializeField]
+    private GameObject _explosaoPlayerPrefab;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +114,7 @@ public class Player : MonoBehaviour
 
         if ( vidas < 1 )
         {
+            Instantiate(_explosaoPlayerPrefab,transform.position,Quaternion.identity);
             Destroy(this.gameObject);
         }
         
